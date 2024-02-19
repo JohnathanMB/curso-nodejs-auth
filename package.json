@@ -1,0 +1,20 @@
+{
+  "name": "example-monorepo-with-yarn-and-concurrently",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": "true",
+  "workspaces": [
+    "old-backend",
+    "new-backend"
+  ],
+  "scripts": {
+    "dev:all-services": "concurrently \"yarn workspace old-backend dev\" \"yarn workspace new-backend dev\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
